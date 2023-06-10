@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-input label="NIS" labelPlacement="floating" type="number" [(ngModel)]="form.nis"></ion-input>
+    <br>
+    <ion-input label="Nama" labelPlacement="floating" [(ngModel)]="form.nama"></ion-input>
+    <br>
+    <ion-input label="Alamat" labelPlacement="floating" [(ngModel)]="form.alamat" ></ion-input>
+    <br>
+    <ion-input label="Rt" type="number" labelPlacement="floating" [(ngModel)]="form.rt"></ion-input>
+    <br>
+    <ion-input label="Rw" type="number" labelPlacement="floating"[(ngModel)]="form.rw" ></ion-input>
+    <br>
+    <ion-input label="Kel/Desa" labelPlacement="floating" [(ngModel)]="form.kel"></ion-input>
+    <br>
+    <ion-input label="Kecamatan" labelPlacement="floating" [(ngModel)]="form.kec"></ion-input>
+    <br>
+    <ion-datetime-button datetime="date"></ion-datetime-button>
+    
+    
+    <ion-button (click)="sendToWhatssapp()">Direct To Whatsapp</ion-button>
+    <ion-button (click)="sendToTelegram()">Direct To Telegram</ion-button>
+    <ion-button (click)="sendToEmail()">Direct To Email</ion-button>
+  </div>
+</ion-content>
